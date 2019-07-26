@@ -1,38 +1,38 @@
-# Building a movie recommendation engine using Amazon Personalize
+# Building a Movie Recommendation Engine using Amazon Personalize
+
+[Amazon Personalize](https://aws.amazon.com/personalize/) is a machine learning service that makes it easy for developers to create individualized recommendations for customers using their applications.
+
+Machine learning is being increasingly used to improve customer engagement by powering personalized product and content recommendations, tailored search results, and targeted marketing promotions. However, developing the machine learning capabilities necessary to produce these sophisticated recommendation systems has been beyond the reach of most organizations today due to the complexity of developing machine learning functionality. Amazon Personalize allows developers with no prior machine learning experience to easily build sophisticated personalization capabilities into their applications, using machine learning technology perfected from years of use on Amazon.com.
 
 ## Prerequisites for the Workshop
 
 - Sign up for an AWS account
-- [Create a Cloud9 Workspace]() - you want to do this step if you are using windows based computer and do not wish to use Putty and PuttyGen to SSH into the EC2 instance that hosts the website. 
-- [Installs and Configs]() - If you were creating a Cloud9 envrionment to SSH into EC2, go through this step also.
-- If you are a Mac or Linux user, then no need to go through the previous 2 steps. But create a KeyPair on EC2 console. Steps are described [here]().
+- [Create a Cloud9 Workspace](#1-create-a-cloud9-workspace) - you want to do this step if you are using windows based computer and do not wish to use Putty and PuttyGen to SSH into the EC2 instance that hosts the website. 
+- [Installs and Configs](#2-installs-and-configs) - If you were creating a Cloud9 envrionment to SSH into EC2, go through this step also.
+- If you are a Mac or Linux user, then no need to go through the previous 2 steps. But create a KeyPair on EC2 console. Steps are described [here](#3-create-a-keypair-on-ec2-console).
 
 ## Workshop Roadmap
 
-- Overview
-- Deploy the App
-- Launch Jupyter Notebook
-- Notebook Setup
-- Item-to-Item Recommendations
-- Personal Ranking
-- App Configuration
+- [Overview](#overview)
+- [Deploy the skeleton Web App](#deploy-the-app)
+- Launch Jupyter Notebook on Amazon SageMaker
+- Use the Notebook create components of Amazon Personalize for movie recommendation using MovieLens dataset.  
+- (Optional) Build Item-to-Item Recommendations using Amazon Personalize
+- (Optional) Build Personal Ranking using Amazon Personalize
+- Setup Web App Configuration on Amazon EC2
 - Shutting Down
 - Conclusion
 
 ## Overview
 
-1. [Amazon Personalize](https://aws.amazon.com/personalize/) is a machine learning service that makes it easy for developers to create individualized recommendations for customers using their applications.
-
-    Machine learning is being increasingly used to improve customer engagement by powering personalized product and content recommendations, tailored search results, and targeted marketing promotions. However, developing the machine learning capabilities necessary to produce these sophisticated recommendation systems has been beyond the reach of most organizations today due to the complexity of developing machine learning functionality. Amazon Personalize allows developers with no prior machine learning experience to easily build sophisticated personalization capabilities into their applications, using machine learning technology perfected from years of use on Amazon.com.
-
-    This lab will walk you through the following:
-    - Deploy and configure a Video Recommendation application
-    - Setting up a Jupyter Notebook environment to interact with Amazon Personalize
-    - Downloading and preparing training data, based on the Movie Lens dataset
-    - Importing prepared data into Amazon Personalize
-    - Building an ML model based upon the Hierarchical Recurrent Neural Network (HRNN) algorithm
-    - Testing your model by deploying an Amazon Personalize campaign
-    - Adding your campaign to the Video Recommendation application
+This lab will walk you through the following:
+- Deploy and configure a Video Recommendation application
+- Setting up a Jupyter Notebook environment to interact with Amazon Personalize
+- Downloading and preparing training data, based on the Movie Lens dataset
+- Importing prepared data into Amazon Personalize
+- Building an ML model based upon the Hierarchical Recurrent Neural Network (HRNN) algorithm
+- Testing your model by deploying an Amazon Personalize campaign
+- Adding your campaign to the Video Recommendation application
 
 ## Deploy the App
 
@@ -54,7 +54,9 @@
 
 1. There will then be two additional screens. The first is called *Options*, but we have none to enter, so just click on **Next**. The second is the final Review screen - **please verify** that the **KeyName** is the one that you just downloaded, and then click on **Create**. 
 
-    This will then go and create the environment, which will take around 10 minutes. Once the console returns to the main CloudFormation screen, you can continue with the next lab step.
+    This will then go and create the environment, which will take around 10 minutes. Once the console returns to the main CloudFormation screen, you can continue with the next lab step, which is to create a Jupyter Notebook environment in AmazonSageMaker. 
+
+
 
 
 # Prerequisites
