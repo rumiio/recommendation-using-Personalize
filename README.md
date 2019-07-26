@@ -16,7 +16,7 @@ Machine learning is being increasingly used to improve customer engagement by po
 - [Overview](#overview)
 - [Deploy the skeleton Web App](#deploy-the-app)
 - Launch Jupyter Notebook on Amazon SageMaker
-- Use the Notebook create components of Amazon Personalize for movie recommendation using MovieLens dataset.  
+- Using the notebook, create components of Amazon Personalize for movie recommendation.  
 - (Optional) Build Item-to-Item Recommendations using Amazon Personalize
 - (Optional) Build Personal Ranking using Amazon Personalize
 - Setup Web App Configuration on Amazon EC2
@@ -38,7 +38,7 @@ This lab will walk you through the following:
 
 1. Click on the **Services** dropdown and select **CloudFormation** from the list of all services by entering CloudFormation into the Find services box. This will bring you to the Amazon CloudFormation console home page.
 
-![cfnSelect](./images/consoleCfnSelect.png)
+    ![cfnSelect](./images/consoleCfnSelect.png)
 
  1. We are going to deploy a pre-built application via a CloudFormation template - this will be a fully-functioning recommendation system, allowing access to multiple Amazon Personalize features. But it has one drawback - there are no models built into it! So we will create them in this lab, and when they are ready we will re-configure this application to use them. 
  
@@ -46,11 +46,11 @@ This lab will walk you through the following:
 
     https://personalize-workshop-files.s3.amazonaws.com/cloudformation_template.yml   
 
-![cfnCreateStack](./images/consoleCfnCreateStack.png)
+    ![cfnCreateStack](./images/consoleCfnCreateStack.png)
 
 1. The next screen asks for more configuration parameters, but only two of these are required: **Stack name** and **KeyName**. For Stack name enter something simple, such as *PersonalizeLabStack*, and select your previously-defined EC2 kay-pair, then click Next (not shown).
 
-![cfnOtherParams](./images/cfnOtherParams.png)
+    ![cfnOtherParams](./images/cfnOtherParams.png)
 
 1. There will then be two additional screens. The first is called *Options*, but we have none to enter, so just click on **Next**. The second is the final Review screen - **please verify** that the **KeyName** is the one that you just downloaded, and then click on **Create**. 
 
@@ -145,8 +145,8 @@ If it asks for a passphrase you can include one or leave it blank and just press
 
 1. The application will run on an EC2 instance, but at some point we will need to connect to the server in order to carry out some configuration task. To do this we need to have an EC2 Key Pair configured on the server that you also have access to on your computer; hence, we need to create and download a new one. Click on EC2 from the list of all services by entering EC2 into the Find services box. This will bring you to the Amazon EC2 console home page.
 
-![EC2 console](./images/consoleEC2Select.png)
+    ![EC2 console](./images/consoleEC2Select.png)
 
 1. On the left-hand menu scroll down until you see Key Pairs and select it, and in the resulting dialog click on the Create Key Pair button. This will bring up a Create Key Pair dialog, where you need to enter the name of a new key pair - call it myPersonalizeWorkshopKey and hit Create. This should automatically download the file, or you may need to manually do so.
 
-![KeyPair](./images/keyPair.png)
+    ![KeyPair](./images/keyPair.png)
