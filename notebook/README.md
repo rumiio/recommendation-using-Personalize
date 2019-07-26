@@ -9,7 +9,7 @@ From here, we will get into the meat of the workshop where you will be using 2 o
 - Overview
 - Deploy the skeleton Web App
 - [Launch Jupyter Notebook environment on Amazon SageMaker](#launch-jupyter-notebook-on-amazon-sagemaker)
-- Using the notebook, create components of Amazon Personalize for movie recommendation.  
+- Using the notebook, [create components of Amazon Personalize for movie recommendation](#using-the-notebook-create-components-of-amazon-personalize-for-movie-recommendation).  
 - (Optional) Build Item-to-Item Recommendations using Amazon Personalize
 - (Optional) Build Personal Ranking using Amazon Personalize
 - Setup Web App Configuration on Amazon EC2
