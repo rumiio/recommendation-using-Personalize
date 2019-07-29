@@ -9,15 +9,15 @@ From here, we will get into the meat of the workshop where you will be using 2 o
 - Overview
 - Deploy the skeleton Web App
 - [Launch Jupyter Notebook environment on Amazon SageMaker](#launch-jupyter-notebook-on-amazon-sagemaker)
-- Using the notebook, [create components of Amazon Personalize for movie recommendation](#using-the-notebook-create-components-of-amazon-personalize-for-movie-recommendation).  
+- [Create components of Amazon Personalize for movie recommendation](#using-the-notebook-create-components-of-amazon-personalize-for-movie-recommendation), using the notebook.
 - (Optional) Build Item-to-Item Recommendations using Amazon Personalize
 - (Optional) Build Personal Ranking using Amazon Personalize
-- Setup Web App Configuration
-    - Django Framework Config
-    - Plug in Models
+- [Setup Web App Configuration](#setup-web-app-configuration)
+    - [Django Framework Config](#django-framework-config)
+    - [Plug in Models](#plug-in-models)
     - (Optional) Additional Campaigns
-- Shutting Down
-- Conclusion
+- [Shutting Down]()
+- [Conclusion]()
 
 
 ## Launch Jupyter Notebook Environment on Amazon SageMaker
@@ -159,3 +159,49 @@ There are many ways to connect to a remote machine using SSH. Feel free to follo
 ## Plug in Models
 
 The application uses the Django Administration feature to define models that are available to the application. This allows multiple models of different types to be configured, and injected or removed from the application at any time. There are three modes of operation of the application:
+
+
+
+# Shutting Down
+
+## Shutting Down the SageMaker Notebook Instance
+
+1. Open the Amazon SageMaker console and click on **Notebook instances**
+
+1. Find the notebook instance listed as *Personalize-Workshop*, select its radio button and then click the **Actions** dropdown.
+
+     ![terminateNotebook](./images/terminateNotebook.png)
+
+1. Click **Stop** to stop the Notebook Instance. This does not delete the underlying data and resources. After a few minutes the instance status will change to *Stopped*, and you can now click on the **Actions** dropdown again, but this time select **Delete**.
+
+
+## Shutting Down the CloudFormation Stack
+
+The CloudFormation stack we deployed in this step contains multiple resources that we’ll to terminate:
+
+- EC2 Instance
+- Application Load Balancer
+- Networking: Internet Gateway, VPC, Subnets, NAT Gateways, Route Table
+
+To delete this:
+
+1. On the **Stacks** page in the CloudFormation console, select the stack that you want to delete. The stack must be currently running.
+1. In the stack details pane, choose **Delete**.
+1. Select **Delete stack** when prompted.
+
+Note: After stack deletion has begun, you cannot abort it. The stack proceeds to the *DELETE_IN_PROGRESS* state.
+
+
+# Conclusion
+
+Upon completion of this lab you will have performed the following:
+
+- Launched a Jupyter notebook from with the Amazon SageMaker service
+- Imported external files into the notebook environment
+- Seen how to enable Preview services within a notebook (assuming your account has been whitelisted for Preview access)
+- Used the pandas libraries to do some pre-processing of the source data
+- Built and deployed an ML model based upon the HRNN algorithm
+- Tested your model via just a few lines of code
+- Deployed your model into a live application
+
+You should now be able to embed this model from within your own application code, using any language that is supported by the AWS SDK. Happy recommending!
