@@ -16,8 +16,8 @@ From here, we will get into the meat of the workshop where you will be using 2 o
     - [Django Framework Config](#django-framework-config)
     - [Plug in Models](#plug-in-models)
     - (Optional) Additional Campaigns
-- [Shutting Down]()
-- [Conclusion]()
+- [Shutting Down](#shutting-down)
+- [Conclusion](#conclusion)
 
 
 ## Launch Jupyter Notebook Environment on Amazon SageMaker
