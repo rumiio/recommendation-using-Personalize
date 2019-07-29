@@ -16,7 +16,7 @@ Machine learning is being increasingly used to improve customer engagement by po
 - [Overview](#overview)
 - [Deploy the skeleton Web App](#deploy-the-app)
 - [Launch Jupyter Notebook on Amazon SageMaker](https://github.com/rumiio/recommendation-using-Personalize/tree/master/notebook#launch-jupyter-notebook-on-amazon-sagemaker)
-- [Create components of Amazon Personalize for movie recommendation](https://github.com/rumiio/recommendation-using-Personalize/tree/master/notebook#using-the-notebook-create-components-of-amazon-personalize-for-movie-recommendation), using the notebook.
+- Create components of Amazon Personalize for movie recommendation, using the notebook.  
 - (Optional) Build Item-to-Item Recommendations using Amazon Personalize
 - (Optional) Build Personal Ranking using Amazon Personalize
 - Setup Web App Configuration on Amazon EC2
