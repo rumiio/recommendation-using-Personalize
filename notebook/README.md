@@ -12,7 +12,7 @@ From here, we will get into the meat of the workshop where you will be using 2 o
 - Using the notebook, [create components of Amazon Personalize for movie recommendation](#using-the-notebook-create-components-of-amazon-personalize-for-movie-recommendation).  
 - (Optional) Build Item-to-Item Recommendations using Amazon Personalize
 - (Optional) Build Personal Ranking using Amazon Personalize
-- Setup Web App Configuration on Amazon EC2
+- Setup Web App Configuration
 - Shutting Down
 - Conclusion
 
@@ -64,3 +64,5 @@ From here, we will get into the meat of the workshop where you will be using 2 o
     ![sagemakerNotebook3](./images/notebook3.png)
 
 1. Now please continue to work through the notebook lab - read the comments prior to each Code cell in order to get an understanding as to what is going on, as these explain why we are doing each step and how it ties in to using the Amazon Personalize service.
+
+## Setup Web App Configuration
