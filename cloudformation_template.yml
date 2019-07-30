@@ -7,7 +7,7 @@ Parameters:
   EnvironmentName:
     Description: An environment name that will be prefixed to resource names
     Type: String
-    Default: "London Summit Personalize Lab"
+    Default: "Personalize Lab"
 
   VpcCIDR:
     Description: Please enter the IP range (CIDR notation) for this VPC
