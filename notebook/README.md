@@ -145,7 +145,7 @@ There are many ways to connect to a remote machine using SSH. Feel free to follo
 
 1. The URL of the server is your ALB followed by the ‘/recommend/’ path, although there is also an ‘/admin/’ path that we’ll use later. For now connect to your server - in my example the server can be found at 
 
-    http://TestS-Appli-ADS60FMCKPMG-1862985075.us-east-1.elb.amazonaws.com/recommend
+    http://perso-appli-1ig76667ghapa-70965737.us-east-1.elb.amazonaws.com/recommend/
 
 1. You should see the following screen in your browser - no Model Precision Metrics are available, as we haven’t added any models yet to the application. You can also see that documentation for this is present, but be aware that it may not be 100% up to date with coding changes on the demo.
 
@@ -189,7 +189,7 @@ Each of these modes allows multiple models of their type to be used, but each mo
 
      ![campaignList](./images/campaignList.png)
 
-1. Click on the **summit-lab-recs-campaign** and you’ll see the **Campaign ARN** - copy this, and head back to the admin screen. Enter **Personal Recommendations** for the model name, enter the ARN where it asks, ensure that the **Model type** is set for recommendations and set the **Model sort order** to 1. Click on **SAVE** to save the definition.
+1. Click on the **sf-loft-lab-recs-campaign** and you’ll see the **Campaign ARN** - copy this, and head back to the admin screen. Enter **Personal Recommendations** for the model name, enter the ARN where it asks, ensure that the **Model type** is set for recommendations and set the **Model sort order** to 1. Click on **SAVE** to save the definition.
 
      ![djangoAddModel](./images/djangoAddModel.png)
 
@@ -214,6 +214,12 @@ Each of these modes allows multiple models of their type to be used, but each mo
 
 
 # Shutting Down
+
+## Deleting each compoments of Amazon Personalize
+
+1. Open the notebook called **personalize_cleanup.ipynb**. 
+1. Enter your account number in the first cell. 
+1. Run all cells to delete each components of Amazon Personalize. 
 
 ## Shutting Down the SageMaker Notebook Instance
 
