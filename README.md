@@ -13,6 +13,10 @@ Machine learning is being increasingly used to improve customer engagement by po
 
 ## Workshop Roadmap
 
+/play vuvuzela► 
+
+:warning: **This workshop works ONLY in us-east-1**
+
 - [Overview](#overview)
 - [Deploy the skeleton Web App](#deploy-the-app)
 - [Launch Jupyter Notebook on Amazon SageMaker](https://github.com/rumiio/recommendation-using-Personalize/tree/master/notebook#launch-jupyter-notebook-on-amazon-sagemaker)
