@@ -13,9 +13,7 @@ Machine learning is being increasingly used to improve customer engagement by po
 
 ## Workshop Roadmap
 
-/play vuvuzela► 
-
-:warning: **This workshop works ONLY in us-east-1**
+:warning: **This workshop works ONLY in N. Viginia (us-east-1)** :warning: 
 
 - [Overview](#overview)
 - [Deploy the skeleton Web App](#deploy-the-app)
