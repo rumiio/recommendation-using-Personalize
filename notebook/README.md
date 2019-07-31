@@ -6,6 +6,8 @@ From here, we will get into the meat of the workshop where you will be using 2 o
 
 ## Workshop Roadmap (continued)
 
+:warning: **This workshop works ONLY in N. Viginia (us-east-1)**  
+
 - Overview
 - Deploy the skeleton Web App
 - [Launch Jupyter Notebook environment on Amazon SageMaker](#launch-jupyter-notebook-on-amazon-sagemaker)
