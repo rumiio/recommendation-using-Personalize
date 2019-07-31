@@ -42,7 +42,47 @@ From here, we will get into the meat of the workshop where you will be using 2 o
 
     ![sagemakerCreateNotebook4](./images/sagemakerCreateNotebook4.png)
 
-    Wait until the notebook instance status is **InService**. This will take a few minutes once the creation process has started. Then click on **Open Jupyter**.
+1. In another browser tab navigate to the IAM console homepage and find the IAM role SageMaker just created. You will be adding 2 policies: one is managed **AmazonPersonalizeFullAccess** and another is inline policy to give SageMaker permission to create a role from the notebook. 
+
+    Click **Attach policies** button. 
+
+    ![iamPersonalizeFullAccess](./images/iamPersonalizeFullAccess.png)
+
+    Type *Personalize* in the search box. It will bring up PersonalizeFullAccess managed policy. Select the checkbox and then click on the **Attach policy** button. 
+
+    ![iamPersonalizeFullAccess2](./images/iamPersonalizeFullAccess2.png)
+
+    Look for the same IAM role again. This time, click on the **Add inline policy** link. 
+
+    ![iamInlinePolicy](./images/iamInlinePolicy.png)
+
+    On **Create policy** window, select JSON tab. Paste the following policy into the text area. Then click on **Review policy**.  
+
+    ```
+    {
+        "Version": "2012-10-17",
+        "Statement": [
+            {
+                "Sid": "VisualEditor0",
+                "Effect": "Allow",
+                "Action": [
+                    "iam:CreateRole",
+                    "iam:AttachRolePolicy",
+                    "iam:PutRolePolicy"
+                ],
+                "Resource": "*"
+            }
+        ]
+    }
+    ```
+
+    ![iamInlinePolicy2](./images/iamInlinePolicy2.png)
+
+    Enter *Create_IAM_Role_Permission* as **Name**. Then click on the **Create policy** button.  
+
+    ![iamInlinePolicy3](./images/iamInlinePolicy3.png)
+
+1. Wait until the notebook instance status is **InService**. This will take a few minutes once the creation process has started. Then click on **Open Jupyter**.
 
     ![sagemakerCreateNotebook5](./images/sagemakerCreateNotebook5.png)
 
