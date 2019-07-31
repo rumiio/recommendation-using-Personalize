@@ -63,7 +63,7 @@ From here, we will get into the meat of the workshop where you will be using 2 o
         "Version": "2012-10-17",
         "Statement": [
             {
-                "Sid": "VisualEditor0",
+                "Sid": "IAMPolicy",
                 "Effect": "Allow",
                 "Action": [
                     "iam:CreateRole",
@@ -81,6 +81,23 @@ From here, we will get into the meat of the workshop where you will be using 2 o
     Enter *Create_IAM_Role_Permission* as **Name**. Then click on the **Create policy** button.  
 
     ![iamInlinePolicy3](./images/iamInlinePolicy3.png)
+
+    Repeat the previous steps to create another inline policy with the following permission. Replace *your-bucket-name* with actual bucket name. Name this plicy *S3PutBucketPolicy_Permission*. 
+
+    ```
+    {
+        "Version": "2012-10-17",
+        "Statement": [
+            {
+                "Sid": "S3Policy",
+                "Effect": "Allow",
+                "Action": "s3:PutBucketPolicy",
+                "Resource": "arn:aws:s3:::your-bucket-name"
+            }
+        ]
+    }
+    ```
+
 
 1. Wait until the notebook instance status is **InService**. This will take a few minutes once the creation process has started. Then click on **Open Jupyter**.
 
