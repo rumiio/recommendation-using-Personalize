@@ -84,7 +84,7 @@ From here, we will get into the meat of the workshop where you will be using 2 o
 
     ![iamInlinePolicy3](./images/iamInlinePolicy3.png)
 
-    Repeat the previous steps to create another inline policy with the following permission. Replace *your-bucket-name* with actual bucket name. Name this plicy *S3PutBucketPolicy_Permission*. 
+    Repeat the previous steps to create another inline policy with the following permission. Replace *your-bucket-name* with actual bucket name. Name this plicy *S3PutPolicy_Permission*. 
 
     ```
     {
@@ -93,8 +93,14 @@ From here, we will get into the meat of the workshop where you will be using 2 o
             {
                 "Sid": "S3Policy",
                 "Effect": "Allow",
-                "Action": "s3:PutBucketPolicy",
-                "Resource": "arn:aws:s3:::your-bucket-name"
+                "Action": [
+                    "s3:PutObject",
+                    "s3:PutBucketPolicy"
+                ],
+                "Resource": [
+                    "arn:aws:s3:::your-bucket-name",
+                    "arn:aws:s3:::*/*"
+                ]
             }
         ]
     }
